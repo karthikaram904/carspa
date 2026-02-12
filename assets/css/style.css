@@ -2313,4 +2313,11 @@ color: #fff !important;
 }
 .dark .main-header .main-menu ul li.active ul li a {
   color: #fff !important;
+
+}
+@media (max-width: 990px) {
+#rtl-toggle,#theme-toggle
+{
+display:none;
+}
 }
