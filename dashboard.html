@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<div class="dash-wrapper">
+
+    <!-- Sidebar -->
+    <aside class="dash-sidebar" id="dashSidebar">
+        
+        <div class="dash-logo">
+            <a href="index.html"><img src="assets/img/logo/carspa-logo.png" alt=""></a>
+        </div>
+
+        <nav class="dash-menu">
+            <a  class="active" href="dashboard.html"><i class="fa fa-dashboard"></i> Dashboard</a>
+            <a href="services-dash.html"><i class="fa fa-car"></i> Services</a>
+            <a href="customers.html"><i class="fa fa-users"></i> Customers</a>
+            <a href="bookings.html"><i class="fa fa-calendar"></i> Bookings</a>
+            <a href="reports.html"><i class="fa fa-file-text"></i> Reports</a>
+            <a href="logout.html"><i class="fa fa-sign-out"></i> Logout</a>
+        </nav>
+    </aside>
+
+    <!-- ✅ Overlay (Correct Place) -->
+    <div class="dash-overlay" id="dashOverlay" onclick="toggleSidebar()"></div>
+
+    <!-- Main Content -->
+    <div class="dash-main">
+
+        <!-- Topbar -->
+        <div class="dash-topbar">
+            <button class="book-toggle-btn" onclick="toggleSidebar()">
+                <i class="fa fa-bars"></i>
+            </button>
+            <h2>Dashboard</h2>
+        </div>
+
+        
+        <div class="dash-content">
+    
+    <div class="dash-stats">
+
+        <div class="stat-card">
+            <div class="stat-icon blue">
+                <i class="fa fa-calendar"></i>
+            </div>
+            <div class="stat-info">
+                <h4>Total Bookings</h4>
+                <h2>120</h2>
+            </div>
+        </div>
+
+        <div class="stat-card">
+            <div class="stat-icon green">
+                <i class="fa fa-users"></i>
+            </div>
+            <div class="stat-info">
+                <h4>Total Customers</h4>
+                <h2>85</h2>
+            </div>
+        </div>
+
+        <div class="stat-card">
+            <div class="stat-icon orange">
+                <i class="fa fa-car"></i>
+            </div>
+            <div class="stat-info">
+                <h4>Total Services</h4>
+                <h2>32</h2>
+            </div>
+        </div>
+
+        <div class="stat-card">
+            <div class="stat-icon red">
+                <i class="fa fa-dollar"></i>
+            </div>
+            <div class="stat-info">
+                <h4>Total Revenue</h4>
+                <h2>$4,500</h2>
+            </div>
+        </div>
+
+    </div>
+
+
+</div>
+<div class="dash-content">
+    <!-- Recent Bookings Section -->
+<div class="cust-table-box">
+
+    <div class="section-header">
+        <h3>Recent Bookings</h3>
+        <a href="bookings.html" class="view-all-btn">View All</a>
+    </div>
+
+    <div class="table-responsive">
+        <table class="dash-table">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Customer</th>
+                    <th>Service</th>
+                    <th>Date</th>
+                    <th>Status</th>
+                    <th>Amount</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>01</td>
+                    <td>Arun Kumar</td>
+                    <td>Interior Cleaning</td>
+                    <td>12 Feb 2026</td>
+                    <td><span class="status completed">Completed</span></td>
+                    <td>$120</td>
+                </tr>
+
+                <tr>
+                    <td>02</td>
+                    <td>Priya</td>
+                    <td>Full Car Wash</td>
+                    <td>11 Feb 2026</td>
+                    <td><span class="status pending">Pending</span></td>
+                    <td>$80</td>
+                </tr>
+
+                <tr>
+                    <td>03</td>
+                    <td>Rahul</td>
+                    <td>Engine Detailing</td>
+                    <td>10 Feb 2026</td>
+                    <td><span class="status cancelled">Cancelled</span></td>
+                    <td>$150</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+    </div>
+
+
+
+    </div>
+
+</div>
+
+<script>
+function toggleSidebar() {
+    var sidebar = document.getElementById("dashSidebar");
+    var overlay = document.getElementById("dashOverlay");
+
+    sidebar.classList.toggle("active");
+    overlay.classList.toggle("active");
+}
+</script>
+
+</body>
+</html>

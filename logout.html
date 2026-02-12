@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<div class="dash-wrapper">
+
+    <!-- Sidebar -->
+    <aside class="dash-sidebar" id="dashSidebar">
+        
+        <div class="dash-logo">
+            <a href="index.html"><img src="assets/img/logo/carspa-logo.png" alt=""></a>
+        </div>
+
+        <nav class="dash-menu">
+            <a href="dashboard.html"><i class="fa fa-dashboard"></i> Dashboard</a>
+            <a href="services-dash.html"><i class="fa fa-car"></i> Services</a>
+            <a href="customers.html"><i class="fa fa-users"></i> Customers</a>
+            <a href="bookings.html"><i class="fa fa-calendar"></i> Bookings</a>
+            <a href="reports.html"><i class="fa fa-file-text"></i> Reports</a>
+            <a class="active" href="logout.html"><i class="fa fa-sign-out"></i> Logout</a>
+        </nav>
+    </aside>
+
+    <!-- ✅ Overlay (Correct Place) -->
+    <div class="dash-overlay" id="dashOverlay" onclick="toggleSidebar()"></div>
+ <div class="dash-main">
+    <!-- Main Content -->
+    <div class="logout-main-wrapper">
+
+    <div class="logout-card">
+        <div class="logout-icon">
+            <i class="fa fa-sign-out"></i>
+        </div>
+
+        <h2>You Have Logged Out</h2>
+        <p>Thank you for using CarSpa Admin Dashboard.</p>
+
+        <div class="logout-actions">
+            <a href="login.html" class="logout-btn primary">Login Again</a>
+            <a href="index.html" class="logout-btn secondary">Go to Website</a>
+        </div>
+    </div>
+
+</div>
+</div>
+
+
+</div>
+
+<script>
+function toggleSidebar() {
+    var sidebar = document.getElementById("dashSidebar");
+    var overlay = document.getElementById("dashOverlay");
+
+    sidebar.classList.toggle("active");
+    overlay.classList.toggle("active");
+}
+</script>
+
+</body>
+</html>

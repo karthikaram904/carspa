@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<div class="dash-wrapper">
+
+    <!-- Sidebar -->
+    <aside class="dash-sidebar" id="dashSidebar">
+        
+        <div class="dash-logo">
+            <a href="index.html"><img src="assets/img/logo/carspa-logo.png" alt=""></a>
+        </div>
+
+        <nav class="dash-menu">
+            <a href="dashboard.html"><i class="fa fa-dashboard"></i> Dashboard</a>
+            <a href="services-dash.html"><i class="fa fa-car"></i> Services</a>
+            <a href="customers.html"><i class="fa fa-users"></i> Customers</a>
+            <a href="bookings.html"><i class="fa fa-calendar"></i> Bookings</a>
+            <a class="active" href="reports.html"><i class="fa fa-file-text"></i> Reports</a>
+            <a href="logout.html"><i class="fa fa-sign-out"></i> Logout</a>
+        </nav>
+    </aside>
+
+    <!-- ✅ Overlay (Correct Place) -->
+    <div class="dash-overlay" id="dashOverlay" onclick="toggleSidebar()"></div>
+
+    <!-- Main Content -->
+    <div class="report-main-wrapper">
+
+    <!-- Topbar -->
+    <div class="report-topbar">
+        <button class="book-toggle-btn" onclick="toggleSidebar()">
+            <i class="fa fa-bars"></i>
+        </button>
+        <h2>Reports</h2>
+    </div>
+
+    <div class="report-content-area">
+
+        <!-- Summary Cards -->
+        <div class="report-summary-grid">
+
+            <div class="report-summary-card">
+                <h3>$8,450</h3>
+                <p>Monthly Revenue</p>
+            </div>
+
+            <div class="report-summary-card">
+                <h3>320</h3>
+                <p>Total Services Done</p>
+            </div>
+
+            <div class="report-summary-card">
+                <h3>145</h3>
+                <p>New Customers</p>
+            </div>
+
+        </div>
+
+        <!-- Filter Section -->
+        <div class="report-filter-bar">
+            <select>
+                <option>Select Month</option>
+                <option>January</option>
+                <option>February</option>
+                <option>March</option>
+            </select>
+
+            <select>
+                <option>Select Year</option>
+                <option>2025</option>
+                <option>2026</option>
+            </select>
+
+            <button>Generate Report</button>
+        </div>
+
+        <!-- Report Table -->
+        <div class="report-table-box">
+            <table class="report-table">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Service</th>
+                        <th>Bookings</th>
+                        <th>Revenue</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr>
+                        <td>01 Feb 2026</td>
+                        <td>Car Wash</td>
+                        <td>25</td>
+                        <td>$1,250</td>
+                        <td><span class="report-badge success">Completed</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>05 Feb 2026</td>
+                        <td>Interior Cleaning</td>
+                        <td>18</td>
+                        <td>$900</td>
+                        <td><span class="report-badge pending">Pending</span></td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+</div>
+
+
+</div>
+
+<script>
+function toggleSidebar() {
+    var sidebar = document.getElementById("dashSidebar");
+    var overlay = document.getElementById("dashOverlay");
+
+    sidebar.classList.toggle("active");
+    overlay.classList.toggle("active");
+}
+</script>
+
+</body>
+</html>

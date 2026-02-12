@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<div class="dash-wrapper">
+
+    <!-- Sidebar -->
+    <aside class="dash-sidebar" id="dashSidebar">
+        
+        <div class="dash-logo">
+            <a href="index.html"><img src="assets/img/logo/carspa-logo.png" alt=""></a>
+        </div>
+
+        <nav class="dash-menu">
+            <a href="dashboard.html"><i class="fa fa-dashboard"></i> Dashboard</a>
+            <a class="active" href="services-dash.html"><i class="fa fa-car"></i> Services</a>
+            <a href="customers.html"><i class="fa fa-users"></i> Customers</a>
+            <a href="bookings.html"><i class="fa fa-calendar"></i> Bookings</a>
+            <a href="reports.html"><i class="fa fa-file-text"></i> Reports</a>
+            <a href="logout.html"><i class="fa fa-sign-out"></i> Logout</a>
+        </nav>
+    </aside>
+
+    <!-- ✅ Overlay (Correct Place) -->
+    <div class="dash-overlay" id="dashOverlay" onclick="toggleSidebar()"></div>
+
+    <!-- Main Content -->
+    <div class="dash-main">
+
+    <!-- Topbar -->
+    <div class="dash-topbar">
+        <button class="book-toggle-btn" onclick="toggleSidebar()">
+            <i class="fa fa-bars"></i>
+        </button>
+        <h2>Services</h2>
+    </div>
+
+    <div class="services-page-wrapper">
+
+        <!-- Section 1 : Service Stats -->
+        <div class="service-stats-grid">
+            <div class="service-stat-card">
+                <h3>15+</h3>
+                <p>Premium Services</p>
+            </div>
+            <div class="service-stat-card">
+                <h3>500+</h3>
+                <p>Cars Detailed</p>
+            </div>
+            <div class="service-stat-card">
+                <h3>98%</h3>
+                <p>Happy Clients</p>
+            </div>
+            <div class="service-stat-card">
+                <h3>5 Years</h3>
+                <p>Experience</p>
+            </div>
+        </div>
+
+        <!-- Section 2 : Service Cards -->
+        <div class="service-list-grid">
+
+            <div class="service-list-card">
+                <h4>Exterior Wash</h4>
+                <p>Complete foam wash & wax finish.</p>
+                <span>$50</span>
+            </div>
+
+            <div class="service-list-card">
+                <h4>Interior Cleaning</h4>
+                <p>Deep vacuum & dashboard polish.</p>
+                <span>$70</span>
+            </div>
+
+            <div class="service-list-card">
+                <h4>Ceramic Coating</h4>
+                <p>Long lasting paint protection.</p>
+                <span>$150</span>
+            </div>
+
+            <div class="service-list-card">
+                <h4>Paint Correction</h4>
+                <p>Remove scratches & swirl marks.</p>
+                <span>$120</span>
+            </div>
+
+        </div>
+
+        <!-- Section 3 : Service Table -->
+        <div class="service-table-section">
+            <h3>All Service Packages</h3>
+
+            <div class="service-table-wrapper">
+                <table class="service-table">
+                    <thead>
+                        <tr>
+                            <th>Service</th>
+                            <th>Duration</th>
+                            <th>Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Basic Wash</td>
+                            <td>1 Hour</td>
+                            <td>$50</td>
+                        </tr>
+                        <tr>
+                            <td>Full Detailing</td>
+                            <td>3 Hours</td>
+                            <td>$100</td>
+                        </tr>
+                        <tr>
+                            <td>Premium Package</td>
+                            <td>5 Hours</td>
+                            <td>$200</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+</div>
+
+<script>
+function toggleSidebar() {
+    var sidebar = document.getElementById("dashSidebar");
+    var overlay = document.getElementById("dashOverlay");
+
+    sidebar.classList.toggle("active");
+    overlay.classList.toggle("active");
+}
+</script>
+
+</body>
+</html>
