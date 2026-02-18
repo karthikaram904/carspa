@@ -2354,6 +2354,9 @@ html, body {
   .header-area .header-bottom {
     padding: 17px 8px;
   }
+	.about-img {
+  text-align: center;
+}
 }
 .about-content .section-title h2 {
   display: inline-block;
@@ -2365,4 +2368,5 @@ html, body {
 .about-content .section-title h2 {
   float: left;
 }
+
 
