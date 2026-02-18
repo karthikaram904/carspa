@@ -2358,4 +2358,11 @@ html, body {
 .about-content .section-title h2 {
   display: inline-block;
 }
+.about-content p {
+  position: relative;
+  display: inline-block;
+}
+.about-content .section-title h2 {
+  float: left;
+}
 
