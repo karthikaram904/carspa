@@ -2368,5 +2368,11 @@ html, body {
 .about-content .section-title h2 {
   float: left;
 }
+@media (max-width: 480px) {
+.hero-shape {
+	display:none;
+}
+}
+
 
 
