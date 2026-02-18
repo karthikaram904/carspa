@@ -2350,3 +2350,8 @@ html, body {
 .dark .about-content p,.dark .why-choose .section-header p,.dark .who-content p,.dark .location-content p,.dark .contact-info p {
   color: #ddd;
 }
+
+.about-content .section-title h2 {
+  display: inline-block;
+  position: relative;
+}
