@@ -940,7 +940,7 @@ body {
 /* Main */
 
 .dash-main {
-    margin-left: 260px;
+    margin-left: 240px;
     width: 100%;
     transition: 0.3s;
 }
@@ -2373,6 +2373,7 @@ html, body {
 	display:none;
 }
 }
+
 
 
 
