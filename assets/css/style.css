@@ -2355,4 +2355,7 @@ html, body {
     padding: 17px 8px;
   }
 }
+.about-content .section-title h2 {
+  display: inline-block;
+}
 
