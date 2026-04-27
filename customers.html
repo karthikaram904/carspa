@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<div class="dash-wrapper">
+
+    <!-- Sidebar -->
+    <aside class="dash-sidebar" id="dashSidebar">
+        
+        <div class="dash-logo">
+            <a href="index.html"><img src="assets/img/logo/carspa-logo.png" alt=""></a>
+        </div>
+
+        <nav class="dash-menu">
+            <a href="dashboard.html"><i class="fa fa-dashboard"></i> Dashboard</a>
+            <a href="services-dash.html"><i class="fa fa-car"></i> Services</a>
+            <a class="active" href="customers.html"><i class="fa fa-users"></i> Customers</a>
+            <a href="bookings.html"><i class="fa fa-calendar"></i> Bookings</a>
+            <a href="reports.html"><i class="fa fa-file-text"></i> Reports</a>
+            <a href="logout.html"><i class="fa fa-sign-out"></i> Logout</a>
+        </nav>
+    </aside>
+
+    <!-- ✅ Overlay (Correct Place) -->
+    <div class="dash-overlay" id="dashOverlay" onclick="toggleSidebar()"></div>
+
+    <!-- Main Content -->
+    <div class="cust-main-wrapper">
+
+    <!-- Topbar -->
+    <div class="cust-topbar">
+        <button class="cust-toggle-btn" onclick="toggleSidebar()">
+            <i class="fa fa-bars"></i>
+        </button>
+        <h2>Customers</h2>
+    </div>
+
+    <div class="cust-content-area">
+
+        <!-- Summary Cards -->
+        <div class="cust-summary-grid">
+
+            <div class="cust-summary-card">
+                <h3>520</h3>
+                <p>Total Customers</p>
+            </div>
+
+            <div class="cust-summary-card">
+                <h3>120</h3>
+                <p>New This Month</p>
+            </div>
+
+            <div class="cust-summary-card">
+                <h3>75%</h3>
+                <p>Returning Clients</p>
+            </div>
+
+        </div>
+
+
+        <!-- Search & Add -->
+        <div class="cust-action-bar">
+            <input type="text" placeholder="Search customers...">
+            <button>Add Customer</button>
+        </div>
+
+
+        <!-- Customers Table -->
+        <div class="cust-table-box">
+            <table class="cust-table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>City</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr>
+                        <td>Karthika</td>
+                        <td>karthika@email.com</td>
+                        <td>9876543210</td>
+                        <td>Chennai</td>
+                        <td><span class="cust-badge active">Active</span></td>
+                        <td>
+                            <button class="cust-edit">Edit</button>
+                            <button class="cust-delete">Delete</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Arun</td>
+                        <td>arun@email.com</td>
+                        <td>9123456780</td>
+                        <td>Coimbatore</td>
+                        <td><span class="cust-badge inactive">Inactive</span></td>
+                        <td>
+                            <button class="cust-edit">Edit</button>
+                            <button class="cust-delete">Delete</button>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</div>
+
+</div>
+
+<script>
+function toggleSidebar() {
+    var sidebar = document.getElementById("dashSidebar");
+    var overlay = document.getElementById("dashOverlay");
+
+    sidebar.classList.toggle("active");
+    overlay.classList.toggle("active");
+}
+</script>
+
+</body>
+</html>
